@@ -17,13 +17,13 @@
 
 # Reverse the string words from last to first!
 
-a = "hello i am john"
-b = a.split
-c = b.each_with_index do |val, index|
-    b[b.count-index-1]
- end
+# a = "hello i am john"
+# b = a.split
+# c = b.each_with_index do |val, index|
+#     b[b.count-index-1]
+#  end
 
- p c.join(" ")
+#  p c.join(" ")
 
 # output => # a = "john am i hello"
 
@@ -395,10 +395,10 @@ c = b.each_with_index do |val, index|
 # c = []
 
 # b = a.split(" ")
-# b.each do |j|
-#     j_length = j.length / 2
-#     j_length.times {|i| j[i], j[-i-1] = j[-i-1], j[i] }
-#     c.push(j)
+# b.each do |i|
+#     i_length = i.length / 2
+#     i_length.times {|j| i[j], i[-j-1] = i[-j-1], i[j] }
+#     c.push(i)
 # end
 # p c.join(" ")
 
