@@ -367,18 +367,15 @@
 # ========================================Program-19======================================== # 
 
 # Find two largest numbers in array
-# a = [2, 8, 6, 3, 4, 7, 9]
+# a = [2, 8, 6, 3, 4, 7, 9, 12, 67]
 # d = []
 # b = a.shift(2).sort
 # c = 
 #   a.inject(b) do |(m2, m1), e| 
-#     case
-#     when e > m1
-#       [m1, e]
-#     when e > m2
-#       [e, m1]
+#     if e > m1
+#      [m1, e]
 #     else
-#       [m2, m1]
+#      [m2, m1]
 #     end
 #   end
 # d.push(c[1])
@@ -392,9 +389,8 @@
 # reverse every string on there place
 
 # a = "i am a good programmer"
-# c = []
-
 # b = a.split(" ")
+# c = []
 # b.each do |i|
 #     i_length = i.length / 2
 #     i_length.times {|j| i[j], i[-j-1] = i[-j-1], i[j] }
@@ -402,21 +398,26 @@
 # end
 # p c.join(" ")
 
+# output => "i ma a doog remmargorp"
 # ========================================Program-21======================================== # 
 
 #  write a program to find an element which root is availible in the array
 
-# a = [2, 8, 16, 4, 9, 27, 3]
+# a = [2, 8, 16, 4, 9, 27, 3, 64]
 # b = []
 
 # a.each_with_index do |val, index|
-#     if Math.cbrt(val) == 2 || Math.cbrt(val) == 3
+#     if Math.cbrt(val) == 2
 #         b.push(val)
+#     elsif Math.cbrt(val) == 3
+#             b.push(val)
+#     elsif Math.cbrt(val) == 4
+#             b.push(val)
 #     end
 # end
 # p b 
 
-# output => [8, 27]
+# output => [8, 27, 64]
 
 
 # ========================================Program-22======================================== # 
@@ -443,22 +444,30 @@
 
 # ========================================Program-23======================================== # 
 
-# if element is repeat then make an uniq array
+# if element is repeat then make an uniq array without using uniq method
 
-# a = [2, 4, 6, 9, 11, 2]
-# b = []
-# a.each do |x| 
-#     if b 
-#         b << x unless b.include?(x)
-#     end
-# end
-# puts b.inspect
+a = [2, 4, 6, 9, 11, 2]
+b = []
+i = 0
+j = i+1                          
+l = a.length - 1
+for i in 0..l
+  for j in i+1..l
+    a.each do |x| 
+      if a[i] == a[j]
+        a.delete(a[j])
+        b.push(x)
+      end
+    end
+  end
+end
+p b
 
 # # output => [2, 4, 6, 9, 11]
 
 # ========================================Program-24======================================== # 
 
-# write a program to add 5 five in odd number index and minus five from even index item
+# write a program to add five in odd number index and minus five from even index item
 
 # a = [2, 16, 9, 40, 11, 18, 3]
 # b = []
@@ -474,5 +483,40 @@
 
 # output => [7, 11, 14, 35, 16, 13, 8]
 
+# ========================================Program-25======================================== # 
+
+#  Add 1 after first letter of every string
+
+# a = "i am programmer"
+
+# b = a.split
+# b.length
+# c = []
+
+# b.each_with_index do |v, i|
+#         if i 
+#         p v[0] << "1"
+#         end
+# end
+
+# output => "i1 a1m p1rogrammer"
+
+# ========================================Program-26======================================== # 
+
+# Delete original and its duplicate values from the array
+
+# a = [2, 4, 6, 9, 11, 2, 7, 8, 4]
+# c = {}
+# d = nil
+# a.each do |x| 
+#    c[x] = (c[x] || 0) + 1 
+#    if c[x] > 1
+#      d = x
+#      a.delete(x)
+#    end
+#   end
+# puts a.to_s
+
+# output => [6, 9, 11, 7, 8]
 
 # -------------------------------------------------------------------------------------------- #
