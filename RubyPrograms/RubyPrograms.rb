@@ -446,22 +446,22 @@
 
 # if element is repeat then make an uniq array without using uniq method
 
-a = [2, 4, 6, 9, 11, 2]
-b = []
-i = 0
-j = i+1                          
-l = a.length - 1
-for i in 0..l
-  for j in i+1..l
-    a.each do |x| 
-      if a[i] == a[j]
-        a.delete(a[j])
-        b.push(x)
-      end
-    end
-  end
-end
-p b
+# a = [2, 4, 6, 9, 11, 2]
+# b = []
+# i = 0
+# j = i+1                          
+# l = a.length - 1
+# for i in 0..l
+#   for j in i+1..l
+#     a.each do |x| 
+#       if a[i] == a[j]
+#         a.delete(a[j])
+#         b.push(x)
+#       end
+#     end
+#   end
+# end
+# p b
 
 # # output => [2, 4, 6, 9, 11]
 
