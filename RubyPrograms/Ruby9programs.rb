@@ -206,7 +206,3 @@
 # output => "hw eo lr ll od"
 
 # ================================================================================ # 
-
-#Program-10 =>  find common a word in string
-
-a = "this is test string"
