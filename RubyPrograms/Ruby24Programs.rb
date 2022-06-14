@@ -1,13 +1,19 @@
 # ========================================Program-1======================================== #
 
 # Check the array of string has palindrome words or not!
-# a = ["aba", "abc", "adc", "bcb", "aaa", "cac", "cvc", "aba", "nan", "ccd", "bba", "mba", "dca"]
+# a = ["aba", "abc", "adc", "bcb", "aaa", "cac", "cvc", "aba", "nan", "ccd", "bba", "mba", "dca", "nn"]
 # b = []
 
 # a.each do |i|
-#     if i.reverse == i
-#         b.push(i)
-#     end
+#   c = ""
+#   l = i.length
+#   while l!=0
+#     l -= 1
+#     c += i[l]
+#   end
+#   if i == c
+#     b.push(i)
+#   end
 # end 
 # p b
 
@@ -19,11 +25,12 @@
 
 # a = "hello i am john"
 # b = a.split
-# c = b.each_with_index do |val, index|
-#     b[b.count-index-1]
-#  end
+# c = ""
+# b.each_with_index do |val, index|
+#     c << b[b.count-index-1] + (" ")
+# end
 
-#  p c.join(" ")
+# p c
 
 # output => # a = "john am i hello"
 
@@ -63,25 +70,6 @@
 
 # ========================================Program-5======================================== # 
 
-# Find the name index number in a alphabetic string!
-
-# alphabet = "abcdefghijklmnopqrstuvwxyz"
-# name = "umesh"
-# nameIndex = []
-
-# name.each_char.with_index do |char, i|
-#     alphabet.each_char.with_index do |val, index|
-#      if char == val
-#         nameIndex.push(index) 
-#      end
-# end
-# end
-# p nameIndex
-
-# output => [20, 12, 4, 18, 7]
-
-# ========================================Program-6======================================== # 
-
 # count individual elements in a string
 
 # a = "hello world"
@@ -117,7 +105,7 @@
 # p "w =  #{w.min}"
 # p "r =  #{r.min}"
 # p "h =  #{h.min}"
-# ========================================Program-7======================================== # 
+# ========================================Program-6======================================== # 
 
 # count vowels in a string
 
@@ -133,7 +121,7 @@
 
 # output => number of vowels = "answer"
 
-# ========================================Program-8======================================== # 
+# ========================================Program-7======================================== # 
 
 # print only odd number letter in an array
 
@@ -150,7 +138,7 @@
 # output => a = ["a", "c", "e"]
 
 
-# ========================================Program-9======================================== # 
+# ========================================Program-8======================================== # 
 
 # multiply array elements by 2 except the 0th index element
 
@@ -169,7 +157,7 @@
 # output => a = [2, 16, 18, 14, 22, 26, 28]
 
 
-# ========================================Program-10======================================== # 
+# ========================================Program-9======================================== # 
 
 # devide array elements by 2 except the 0th index element
 
@@ -187,7 +175,7 @@
 # p b
 # output => a = [2, 4, 9, 7, 11, 13, 7]
 
-# ========================================Program-11======================================== # 
+# ========================================Program-10======================================== # 
 
 # multiply the array elements by 3 except the 1st,2nd and last elements 
 
@@ -205,7 +193,7 @@
 
 # output => a = [2, 8, 27, 21, 33, 39, 14]
 
-# ========================================Program-12======================================== # 
+# ========================================Program-11======================================== # 
 
 # this is the output 
 # a = [2, 4, 6, 8, 10, 12]
@@ -218,7 +206,7 @@
 # so what is the input ,hint first element is 0
 # the input is maybe => [0, 2, 4, 6, 8, 10]
 
-# ========================================Program-13======================================== # 
+# ========================================Program-12======================================== # 
 
 #  convert numbers of array into string which are less than 10 only. 
 
@@ -237,7 +225,7 @@
 # p c
 # a = ["two", "eight", "seven", "nine", 11, 13, 14]
 
-# ========================================Program-14======================================== # 
+# ========================================Program-13======================================== # 
 
 # Ruby program to find area of (circle, triangle, rectangle)
 
@@ -419,30 +407,7 @@
 
 # output => [8, 27, 64]
 
-
 # ========================================Program-22======================================== # 
-
-# write a program to sum string in set of two
-
-# a = "i love coding"
-
-# b = a.split
-
-# c = []
-
-# b.each do |i|
-#     if i.length > 1
-#         c.push(i.scan(/.{2}/))
-#     else
-#         c.push(i)
-#     end
-# end
-# p c.join(' ')
-
-
-# output => "i lo ve co di ng"
-
-# ========================================Program-23======================================== # 
 
 # if element is repeat then make an uniq array without using uniq method
 
@@ -465,7 +430,7 @@
 
 # # output => [2, 4, 6, 9, 11]
 
-# ========================================Program-24======================================== # 
+# ========================================Program-23======================================== # 
 
 # write a program to add five in odd number index and minus five from even index item
 
@@ -483,25 +448,7 @@
 
 # output => [7, 11, 14, 35, 16, 13, 8]
 
-# ========================================Program-25======================================== # 
-
-#  Add 1 after first letter of every string
-
-# a = "i am programmer"
-
-# b = a.split
-# b.length
-# c = []
-
-# b.each_with_index do |v, i|
-#         if i 
-#         p v[0] << "1"
-#         end
-# end
-
-# output => "i1 a1m p1rogrammer"
-
-# ========================================Program-26======================================== # 
+# ========================================Program-24======================================== # 
 
 # Delete original and its duplicate values from the array
 

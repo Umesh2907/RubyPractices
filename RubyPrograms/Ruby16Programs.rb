@@ -3,15 +3,13 @@
 
 # a = "i am programmer"
 # b = a.split
-# c = b.length
-# d = []
+# d = ""
 
 # solution-1==with no result========
-# for i in 0..c 
 #   b.each_with_index do |val, index|
-#     p val[0] + "1"
+#     d += (b[index][0] + "1" + b[index][1, b[index].length])+ " "
 #   end
-# end
+#   p d
 
 # solution-2==with method solution==
 # b.each do |j|
@@ -57,7 +55,7 @@
 
 # =============================================================================== #
  
-# program-3 => concat each number with its value 
+# program-3 => concat each number
 # a = [2, 8, 13, 14, 16, 20]
 # b = []
 
@@ -165,7 +163,7 @@
 #   end
 # end
 
-# p b.map(&:to_i)
+# p b
 
 
 # output => [12, 24, 46, 68, 89, 912]
@@ -185,8 +183,9 @@
 
 # for i in 0..e
 #   for j in 0..f
-#   g.push(c[i] + d[j])
-#    i += 1
+#     p c[i] + d[j]    
+#     g.push(c[i] + d[j])
+#     i += 1
 #   end
 #   p g
 # end
@@ -201,8 +200,168 @@
 # for i in 0..l - 1
 #   b << (a[i] + a[i - 5]) + (" ")
 # end
-# p a[i - 4]
 # p b
 # output => "hw eo lr ll od"
 
 # ================================================================================ # 
+
+# program-10 => find common word in string
+
+# a = "this is test string"
+# b = a.split
+# c = b.length - 1
+# d = []
+
+# for i in 0..c
+#   if b[i] == "is"
+#     d.push(b[i])
+#   end 
+# end
+# p d.join 
+
+# output => "is"
+
+# ================================================================================ # 
+
+# program-11 => sum string in set of two letters
+
+# solution-1============================
+# a = "i love coding"
+
+# b = a.split
+
+# c = []
+
+# b.each do |i|
+#     if i.length > 1
+#         c.push(i.scan(/.{2}/))
+#     else
+#         c.push(i)
+#     end
+# end
+# p c.join(' ')
+
+
+# solution-2============================
+# a = "i love coding"
+# b = a.delete(" ")
+# c = []
+# c << b[0]
+
+# for i in 0..a.length - 1
+#   if i.even?
+#     c << b[i+1].to_s + b[i+2].to_s
+#   end
+# end
+
+# p c.reject(&:empty?).join(" ")
+
+# output => "i lo ve co di ng"
+
+# ================================================================================ # 
+
+# program-12 => 
+
+# a = ["ab", "cd", "ef", "gh", "ij"]
+# b = []
+# c = []
+# d = a.join()
+# e = d.split("")
+# f = d.length
+# e.each_with_index do |val, index|
+#   if index < 5
+#     if (index%2 == 0)
+#       c.push(e[index] + e[f-1])
+#       f -= 1
+#     else
+#       b.push(e[index] + e[f-1])
+#       f -= 1
+#     end
+#   end
+# end
+
+# p c.concat b
+
+# output => ["aj", "ch", "ef", "bi", "dg"]
+
+# ================================================================================ # 
+
+# Program-13 =>
+# write a program to draw
+
+# a = ["a", "b", "c", "d", "e", "f", "g"]
+# c = "*"
+# a.each do |i|
+#   puts "#{c} #{"x " * 4}#{i}"
+# end
+
+# output =>   * x x x x a
+#             * x x x x b
+#             * x x x x c
+#             * x x x x d
+#             * x x x x e
+#             * x x x x f
+#             * x x x x g
+
+# ================================================================================ # 
+
+# Program-14 =>
+# reverse array without using reverse
+
+# a = [1, 7, 9, 4, 3, 6, 2]
+# b = []
+# l = a.length - 1
+
+# while l >= 0
+#     b << a[l]
+#     l -= 1
+# end
+# p b
+
+# output => [2, 6, 3, 4, 9, 7, 1]
+
+# ================================================================================ # 
+
+# Program-15 => 
+
+# a = [6, 8, 9, 7, 4, 8]
+# b = [2, 4, 9, 7, 6, 3]
+# d = b.length 
+# c = []
+# a.each_with_index do |v,i|
+#     if a[i] % b[d-1] == 0
+#       c.push(a[i]/b[d-1])
+#       d -= 1
+#     else
+#       c.push(a[i]*b[d-1])
+#       d -= 1
+#     end
+# end
+# k = []
+# l = c.length - 1
+# while l >= 0 
+#   k << c[l]
+#   l-=1
+# end
+# p k
+
+# ================================================================================ # 
+
+# Program-16 => 
+
+# a = [2, 6, 8, 3, 0, 1, 7]
+# b = []
+# a.each_with_index do |val, index|
+#   if a[index] != a[0]
+#     c = a[0] * a[index] * a[index -1]
+#     b.push(c)
+#   else
+#     c = a[0] * a[index]
+#     b.push(c)
+#   end
+# end
+# p b
+
+# output => [4, 24, 96, 48, 0, 0, 14]
+
+# -------------------------------------------------------------------------------------------- #
