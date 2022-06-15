@@ -39,6 +39,7 @@
 # Replace the prime number with 0 from the array!
 
 # a = [2, 8, 9, 7, 80, 11, 48]
+# solution-1===================
 # b = []
 # a.each do |i|
 #     if i % 2 != 0 && i % 3 != 0
@@ -48,7 +49,31 @@
 #     end
 # end
 # puts b
-
+# solution-2==================
+# b = []
+# i = 0;
+# j = 0;
+# flag = 0;
+# while(i<a.size)
+#   flag = 0;
+#   j=2;
+  
+#   while(j<a[i]/2)
+    
+#     if(a[i]%j==0)
+#         flag=1;
+#     end
+#     j=j+1
+#   end
+  
+#   if flag == 0 && a[i] >2
+#       b << (a[i] = 0)
+#   else
+#       b << (a[i])
+#   end
+#   i=i+1		
+# end
+# p b
 # output => a = [2, 8, 9, 0, 80, 0, 48]
 
 
@@ -72,54 +97,80 @@
 
 # count individual elements in a string
 
+# solution-1=======================
 # a = "hello world"
-# h = []
-# e = []
-# l = []
-# o = []
-# w = []
-# r = []
-# d = []
-# a.each_char.with_index do |val|
+# h = 0
+# e = 0
+# l = 0
+# o = 0
+# w = 0
+# r = 0
+# d = 0
+
+# a.each_char do |val|
 #     if val == "h"
-#        h.push(a.count "h")
+#         h = (a.count "h")
 #     elsif val == "e"
-#         e.push(a.count "e")
+#         e = (a.count "e")
 #     elsif val == "l"
-#         l.push(a.count "l")
+#         l = (a.count "l")
 #     elsif val == "o"
-#         o.push(a.count "o")
+#         o = (a.count "o")
 #     elsif val == "w"
-#         w.push(a.count "w")
+#         w = (a.count "w")
 #     elsif val == "r"
-#         r.push(a.count "r")
+#         r = (a.count "r")
 #     elsif val == "d"
-#         d.push(a.count "d")
+#         d = (a.count "d")
 #     end
 # end
 
-# p "h =  #{h.min}"
-# p "e =  #{e.min}"
-# p "l =  #{l.min}"
-# p "o =  #{o.min}"
-# p "w =  #{w.min}"
-# p "r =  #{r.min}"
-# p "h =  #{h.min}"
+# puts "h =  #{h}"
+# puts "e =  #{e}"
+# puts "l =  #{l}"
+# puts "o =  #{o}"
+# puts "w =  #{w}"
+# puts "r =  #{r}"
+# puts "d =  #{d}"
+
+# solution-2=======================
+# a = "hello world"
+
+# def find_char_count(b,c)
+#   b.each_char do |val|
+#     if c == val
+#       c = (b.count c)
+#       puts "#{b[val]} = #{c}"
+#     end
+#   end
+# end
+
+# find_char_count(a, "h")
+# find_char_count(a, "e")
+# find_char_count(a, "l")
+# find_char_count(a, "o")
+# find_char_count(a, "w")
+# find_char_count(a, "r")
+# find_char_count(a, "d")
 # ========================================Program-6======================================== # 
 
 # count vowels in a string
 
-# a = "This tutorial will discuss different methods to calculate numbers in an array"
-# b = []
+# a = "This program will calculate numbers of vowels in a string"
 
-# a.each_char do |char|
-#  if ["a", "e", "i", "o", "u"].include? char
-#    b.push(char.count  a)
+# def vowels_counter(str)
+#   b = []
+#   vowels = ["a", "e", "i", "o", "u"]
+#   vowels.each do |i|
+#     if str.each_char { |letters| (b << i) if i == letters}
+#     end
+#   end
+#   puts "This Array has #{b.count} vowels"
 # end
-# end
-# p b.sum
 
-# output => number of vowels = "answer"
+# vowels_counter(a)
+
+# output => This Array has 16 vowels
 
 # ========================================Program-7======================================== # 
 
@@ -181,9 +232,10 @@
 
 # a = [2, 8, 9, 7, 11, 13, 14]
 # b = []
+# c = a.length-1
 
 # a.each_with_index do |val, index|
-#     if index != 0 && index != 1
+#     if index != 0 && index != 1 && val != a[c]
 #         b.push(val * 3)
 #     else
 #         b.push(val)
@@ -255,7 +307,6 @@
 
 # Ruby program to calculate days which we pass from the date of birth
 
-# def find_age_in_days("dob")
 # require 'date' 
 # def find_age_in_days(dob)
 #   currentDate = Date.today
@@ -270,18 +321,18 @@
 # Ruby program to calculate the date difference in days,hours,minuts
 
 # require 'date' 
-# def difference_between_date
-#    a = Date.new(2022,6,8)
-#    b = Date.new(2022,6,4)
-#    days = (a - b).to_i
-#    hours = ((a - b ) * 24).to_i
-#    minutes = ((a - b) * 24 * 60).to_i
+# def difference_between_date(a, b)
+  #  a = Time.now
+  #  b = Time.new(2022,6,4)
+  #  p days = (a - b).to_i
+  #  p hours = ((a - b ) / 60 / 60 / 24).to_i
+  #  p minutes = ((a - b) / 60 / 60).to_i
 
-#    p "difference between two dates is #{days} day, #{hours} hours and #{minutes} minutes"
+  #  p "difference between two dates is #{days} days, #{hours} hours and #{minutes} minutes and #{seconds}"
 
 # end
 
-# difference_between_date()
+# difference_between_date(Date.new(2022,6,8), Date.new(2022,6,4))
 
 # ========================================Program-16======================================== # 
 
@@ -355,7 +406,7 @@
 # ========================================Program-19======================================== # 
 
 # Find two largest numbers in array
-# a = [2, 8, 6, 3, 4, 7, 9, 12, 67]
+# a = [2, 8, 6, 3, 4, 7, 9]
 # d = []
 # b = a.shift(2).sort
 # c = 
@@ -381,7 +432,7 @@
 # c = []
 # b.each do |i|
 #     i_length = i.length / 2
-#     i_length.times {|j| i[j], i[-j-1] = i[-j-1], i[j] }
+#     i_length.times {|j| i[j], i[-j-1] = i[-j-1], i[j]}
 #     c.push(i)
 # end
 # p c.join(" ")
@@ -391,7 +442,7 @@
 
 #  write a program to find an element which root is availible in the array
 
-# a = [2, 8, 16, 4, 9, 27, 3, 64]
+# a = [2, 8, 16, 4, 9, 27, 3]
 # b = []
 
 # a.each_with_index do |val, index|
@@ -405,13 +456,14 @@
 # end
 # p b 
 
-# output => [8, 27, 64]
+# output => [8, 27]
 
 # ========================================Program-22======================================== # 
 
 # if element is repeat then make an uniq array without using uniq method
 
-# a = [2, 4, 6, 9, 11, 2]
+# solution-1=========================
+# a = [2, 4, 6, 9, 11, 2, 4, 8, 9]
 # b = []
 # i = 0
 # j = i+1                          
@@ -428,7 +480,21 @@
 # end
 # p b
 
-# # output => [2, 4, 6, 9, 11]
+# solution-2===========================
+# a = [2, 4, 6, 9, 11, 2, 4, 8, 9]
+# b = []
+# c = []
+# a.each do |x| 
+#    c[x] = (c[x] || 0) + 1 
+#    if c[x] > 1
+#       d = x
+#    else
+#     b.push(x)
+#    end
+#   end
+# p b
+
+# # output => [2, 4, 6, 9, 11, 8]
 
 # ========================================Program-23======================================== # 
 
@@ -453,16 +519,15 @@
 # Delete original and its duplicate values from the array
 
 # a = [2, 4, 6, 9, 11, 2, 7, 8, 4]
-# c = {}
-# d = nil
+# c = []
 # a.each do |x| 
 #    c[x] = (c[x] || 0) + 1 
 #    if c[x] > 1
-#      d = x
+#       d = x
 #      a.delete(x)
 #    end
 #   end
-# puts a.to_s
+# p a
 
 # output => [6, 9, 11, 7, 8]
 

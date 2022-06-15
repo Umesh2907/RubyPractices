@@ -101,35 +101,12 @@
 
 # output => "esrever gnisu tuohtiw gnirts esrever"
 
-# =============================================================================== #
-
-# program- 6 => if element is repeat then make an uniq array without using uniq method
-
-# a = [2, 4, 6, 9, 11, 2]
-# b = []
-# i = 0
-# j = i+1
-# l = a.length - 1
-# for i in 0..l
-#   for j in i+1..l
-#     a.each do |x| 
-#       if a[i] == a[j]
-#         a.delete(a[j])
-#         b.push(x)
-#       end
-#     end
-#   end
-# end
-# p b
-
-# # output => [2, 4, 6, 9, 11]
-
 # ================================================================================ # 
 
-#Program-7 => Find the name index number in a alphabetic string!
+#Program-6 => Find the name index number in a alphabetic string!
 
 # alphabet = "abcdefghijklmnopqrstuvwxyz"
-# name = "umesh"
+# name = "vinay"
 # nameIndex = []
 
 # name.each_char.with_index do |char, i|
@@ -141,11 +118,11 @@
 # end
 # p nameIndex
 
-# output => [20, 12, 4, 18, 7]
+# output => [21, 8, 13, 0, 24]
 
 # ================================================================================ # 
 
-#Program-8 => concat next num 
+#Program-7 => concat next num 
 
 # a = [1, 2, 4, 6, 8, 9, 12]
 # b = []
@@ -170,7 +147,7 @@
 
 # ================================================================================ # 
 
-#Program-9 => concat strings in set of two characters
+#Program-8 => concat strings in set of two characters
 
 # solution-1=========with error========
 # a = "hello world"
@@ -205,10 +182,10 @@
 
 # ================================================================================ # 
 
-# program-10 => find common word in string
+# program-9 => find common word in string
 
+# solution-1======================
 # a = "this is test string"
-# b = a.split
 # c = b.length - 1
 # d = []
 
@@ -221,9 +198,21 @@
 
 # output => "is"
 
+# solution-2==return words which includes given letters
+# a = "this is test string"
+# c = ""
+# b = a.split
+# b.each do |i|
+#     if i.match(/is/)
+#         c << i + (",")
+#     end
+# end
+# p c
+# output => "this,is,"
+
 # ================================================================================ # 
 
-# program-11 => sum string in set of two letters
+# program-10 => sum string in set of two letters
 
 # solution-1============================
 # a = "i love coding"
@@ -260,7 +249,7 @@
 
 # ================================================================================ # 
 
-# program-12 => 
+# program-11 => 
 
 # a = ["ab", "cd", "ef", "gh", "ij"]
 # b = []
@@ -286,7 +275,7 @@
 
 # ================================================================================ # 
 
-# Program-13 =>
+# Program-12 =>
 # write a program to draw
 
 # a = ["a", "b", "c", "d", "e", "f", "g"]
@@ -305,7 +294,7 @@
 
 # ================================================================================ # 
 
-# Program-14 =>
+# Program-13 =>
 # reverse array without using reverse
 
 # a = [1, 7, 9, 4, 3, 6, 2]
@@ -322,8 +311,9 @@
 
 # ================================================================================ # 
 
-# Program-15 => 
+# Program-14 => 
 
+# solution-1===================
 # a = [6, 8, 9, 7, 4, 8]
 # b = [2, 4, 9, 7, 6, 3]
 # d = b.length 
@@ -337,6 +327,7 @@
 #       d -= 1
 #     end
 # end
+#  p c
 # k = []
 # l = c.length - 1
 # while l >= 0 
@@ -345,9 +336,26 @@
 # end
 # p k
 
+# solution-2======================
+# a = [6, 8, 9, 7, 4, 8]
+# b = [2, 4, 9, 7, 6, 3]
+# d = a.length - 1
+# c = []
+# b.each_with_index do |v,i|
+#     if a[d] % b[i] == 0
+#       c.push(a[d]/b[i])
+#       d -= 1
+#     else
+#       c.push(b[i]*a[d])
+#       d -= 1
+#     end
+# end
+#  p c
+# output => [4, 1, 63, 63, 48, 2]
+
 # ================================================================================ # 
 
-# Program-16 => 
+# Program-15 => 
 
 # a = [2, 6, 8, 3, 0, 1, 7]
 # b = []
